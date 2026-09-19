@@ -39,8 +39,8 @@
 <p class="meta">Dernière mise à jour : 19 septembre 2026</p>
 
 <h2>Résumé</h2>
-<p>Vectorem ne collecte aucune donnée personnelle, n'a pas de compte, n'intègre aucun SDK publicitaire ou analytique, et ne partage rien avec des tiers. Tout ce que l'application produit (tâches, rappels, événements, enregistrements audio, historique du presse-papiers, notes, calculs…) reste stocké <strong>uniquement sur ton appareil</strong>, dans l'espace privé de l'application.</p>
-<p>Une seule exception, et seulement quand tu la lances toi-même : l'outil <strong>Test de débit</strong> envoie des requêtes à Cloudflare (voir plus bas).</p>
+<p>Vectorem n'a pas de compte et ne collecte lui-même aucune donnée personnelle. Tout ce que l'application produit (tâches, rappels, événements, enregistrements audio, historique du presse-papiers, notes, calculs…) reste stocké <strong>uniquement sur ton appareil</strong>, dans l'espace privé de l'application.</p>
+<p>Deux fonctions contactent un service extérieur, et seulement quand tu les lances toi-même : le <strong>Test de vitesse</strong> (Cloudflare) et les <strong>pubs facultatives</strong> (Google AdMob), que tu peux regarder pour débloquer un outil ou une fonction. Aucune pub ne s'affiche sans ton action.</p>
 
 <h2>Données stockées localement</h2>
 <p>Selon les outils que tu actives, Vectorem enregistre localement (jamais transmis) :</p>
@@ -48,29 +48,39 @@
   <li>Tâches, rappels et événements que tu crées (titre, échéance, notes).</li>
   <li>Enregistrements audio du Dictaphone (stockés dans l'espace privé de l'app).</li>
   <li>Historique du presse-papiers (uniquement ce que tu copies pendant que l'écran Presse-papiers est ouvert — Android bloque la lecture en arrière-plan depuis Android 10).</li>
-  <li>Notes rapides, historiques (palettes, codes QR, code Morse, tirages, mesures de pouls, secousses, tests de débit) et réglages de chaque outil.</li>
+  <li>Notes rapides, historiques (palettes, codes QR, code Morse, tirages, secousses, tests de vitesse), réglages de chaque outil, disposition de l'accueil et liste des fonctions que tu as débloquées.</li>
 </ul>
 <p>Rien de tout cela ne quitte l'appareil. Désinstaller Vectorem supprime définitivement toutes ces données. Les sauvegardes et exports que tu déclenches toi-même (fichier de sauvegarde, image de palette, de tableau ou de code QR) sont écrits là où tu les envoies ; l'app ne les transmet nulle part.</p>
 
-<h2>Connexions réseau</h2>
+<h2>Publicités facultatives (Google AdMob)</h2>
 <ul>
-  <li><strong>Test de débit</strong> : quand tu lances un test, Vectorem télécharge et envoie des données de test vers <code>speed.cloudflare.com</code> (Cloudflare) pour mesurer ta connexion. Cloudflare reçoit, comme n'importe quel site web, ton adresse IP et les informations techniques d'une requête. Aucune donnée personnelle n'est ajoutée par Vectorem. Le résultat n'est enregistré que sur ton appareil. Aucun test ne se lance sans action de ta part.</li>
+  <li>Vectorem n'affiche <strong>aucune publicité forcée</strong>. Une pub vidéo n'est chargée que lorsque tu appuies sur « Regarder une pub » pour débloquer un outil ou une fonction.</li>
+  <li>À ce moment, le SDK Google Mobile Ads (Google LLC) collecte et partage avec Google, à des fins de publicité, d'analyse et de prévention de la fraude : ton <strong>adresse IP</strong>, tes <strong>interactions avec la pub</strong> (par exemple la vidéo regardée), des <strong>informations de diagnostic</strong> et des <strong>identifiants d'appareil</strong> (identifiant publicitaire Android, identifiant de l'ensemble d'apps). Ces données sont chiffrées pendant leur transfert (TLS). Voir la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>.</li>
+  <li>Vectorem ne reçoit ni ne stocke ces données : l'app sait seulement que la pub a été regardée jusqu'au bout, et enregistre le déblocage sur ton appareil.</li>
+  <li>Dans l'Espace économique européen (et au Royaume-Uni), un formulaire de consentement s'affiche avant la première pub. Tu peux modifier tes choix à tout moment dans Réglages → Publicités → « Choix de confidentialité des pubs ». Si tu refuses, aucune pub n'est affichée et la fonction reste verrouillée.</li>
+  <li>Tu peux réinitialiser ou supprimer l'identifiant publicitaire dans les réglages Android (section Annonces / Confidentialité).</li>
+</ul>
+
+<h2>Autres connexions réseau</h2>
+<ul>
+  <li><strong>Test de vitesse</strong> : quand tu lances un test, Vectorem télécharge et envoie des données de test vers <code>speed.cloudflare.com</code> (Cloudflare) pour mesurer ta connexion. Cloudflare reçoit, comme n'importe quel site web, ton adresse IP et les informations techniques d'une requête. Aucune donnée personnelle n'est ajoutée par Vectorem. Le résultat n'est enregistré que sur ton appareil. Aucun test ne se lance sans action de ta part.</li>
   <li><strong>Scanner réseau</strong> : sonde les appareils de ton réseau local (Wi-Fi). Les résultats restent sur l'appareil.</li>
-  <li>Aucune autre connexion : pas de publicité, pas de statistiques, pas de rapport d'erreurs.</li>
+  <li>Aucune autre connexion : pas de statistiques d'usage, pas de rapport d'erreurs.</li>
 </ul>
 
 <h2>Permissions utilisées</h2>
-<p>Chaque permission n'est demandée qu'au moment où tu actives l'outil correspondant, jamais au démarrage de l'app.</p>
+<p>Les permissions sensibles (caméra, microphone, notifications) ne sont demandées qu'au moment où tu actives l'outil correspondant, jamais au démarrage de l'app.</p>
 <div class="tablewrap">
 <table>
   <thead><tr><th>Permission</th><th>Outil</th><th>Usage</th></tr></thead>
   <tbody>
-    <tr><td>Caméra</td><td>Code QR, Loupe, Pulse</td><td>Lire un QR code, grossir l'image en direct, ou observer les variations de lumière sous le flash pour estimer le pouls. Rien n'est photographié ni enregistré.</td></tr>
-    <tr><td>Microphone</td><td>Dictaphone, Sonomètre</td><td>Enregistrer un mémo audio (Dictaphone) ou mesurer le niveau sonore ambiant (Sonomètre, rien n'est enregistré).</td></tr>
+    <tr><td>Caméra</td><td>Code QR, Boîte à outils (loupe), Morse (détection par flash)</td><td>Lire un QR code, grossir l'image en direct, ou détecter des flashs lumineux. Rien n'est photographié ni enregistré.</td></tr>
+    <tr><td>Microphone</td><td>Dictaphone, Sonomètre, Morse (détection par le son)</td><td>Enregistrer un mémo audio (Dictaphone), mesurer le niveau sonore ambiant (Sonomètre) ou détecter des bips (Morse). Seul le Dictaphone enregistre.</td></tr>
     <tr><td>Notifications</td><td>Rappels, Tâches, Événements, Minuteur, Pomodoro</td><td>Afficher la notification d'un rappel, d'une échéance de tâche, d'un événement, d'un minuteur ou d'une phase Pomodoro.</td></tr>
     <tr><td>Démarrage terminé</td><td>Rappels, Tâches, Événements, Minuteur, Pomodoro</td><td>Reprogrammer tes alertes après un redémarrage du téléphone — sans ça, elles seraient perdues.</td></tr>
-    <tr><td>Internet</td><td>Test de débit, Scanner réseau</td><td>Mesurer ta connexion et sonder ton réseau local (voir « Connexions réseau »).</td></tr>
-    <tr><td>État du réseau</td><td>Infos appareil, Scanner réseau</td><td>Afficher si tu es connecté en Wi-Fi ou en données mobiles — lecture seule.</td></tr>
+    <tr><td>Internet</td><td>Test de vitesse, Scanner réseau, pubs facultatives</td><td>Mesurer ta connexion, sonder ton réseau local et charger une pub que tu as choisi de regarder (voir « Publicités facultatives »).</td></tr>
+    <tr><td>Identifiant publicitaire</td><td>Pubs facultatives</td><td>Permet à Google AdMob d'utiliser l'identifiant publicitaire de l'appareil quand tu regardes une pub. Réinitialisable dans les réglages Android.</td></tr>
+    <tr><td>État du réseau</td><td>Infos appareil, Scanner réseau, pubs facultatives</td><td>Afficher si tu es connecté en Wi-Fi ou en données mobiles — lecture seule.</td></tr>
     <tr><td>Réglages audio</td><td>Égaliseur, Son spatial</td><td>Attacher un effet de traitement au son en cours de lecture. Ne capte jamais de son, contrairement au Microphone.</td></tr>
     <tr><td>Biométrie / empreinte</td><td>Verrouillage de l'app (Réglages)</td><td>Verrouiller l'app avec l'empreinte, le visage ou le code de ton téléphone. Vectorem ne voit ni ne stocke aucune donnée biométrique : tout est géré par Android.</td></tr>
   </tbody>
@@ -79,16 +89,17 @@
 <p>Le sélecteur de photo de l'outil Palette (choisir une image pour en extraire les couleurs) n'apparaît pas dans ce tableau : Android le fournit sans qu'aucune permission ne soit demandée à l'app.</p>
 
 <h2>Partage avec des tiers</h2>
-<p>Aucun. Vectorem ne partage aucune donnée avec qui que ce soit. La seule communication avec un tiers est le Test de débit décrit ci-dessus, que tu déclenches toi-même.</p>
+<p>Vectorem ne vend aucune donnée. Les seules communications avec des tiers sont celles décrites ci-dessus et déclenchées par toi : Google (pubs facultatives) et Cloudflare (Test de vitesse).</p>
 
 <h2>Suppression des données</h2>
 <ul>
-  <li>Désinstaller l'application supprime toutes ses données.</li>
+  <li>Désinstaller l'application supprime toutes ses données locales.</li>
   <li>Depuis les réglages Android de l'app (Paramètres système → Applications → Vectorem → Stockage), tu peux aussi vider les données sans désinstaller.</li>
+  <li>Pour les données traitées par Google lors d'une pub, utilise les contrôles de ton compte Google et les réglages Android de l'identifiant publicitaire.</li>
 </ul>
 
 <h2>Enfants</h2>
-<p>Vectorem ne cible pas spécifiquement les enfants et ne collecte aucune donnée personnelle, d'aucun utilisateur.</p>
+<p>Vectorem ne s'adresse pas aux enfants de moins de 13 ans et ne collecte sciemment aucune donnée à leur sujet.</p>
 
 <h2>Contact</h2>
 <p>Pour toute question sur cette politique de confidentialité : <a href="mailto:themandawalker.pro@gmail.com">themandawalker.pro@gmail.com</a></p>
@@ -101,8 +112,8 @@
 <p class="meta">Last updated: September 19, 2026</p>
 
 <h2>Summary</h2>
-<p>Vectorem collects no personal data, has no accounts, includes no advertising or analytics SDK, and shares nothing with third parties. Everything the app produces (tasks, reminders, events, audio recordings, clipboard history, notes, calculations…) is stored <strong>only on your device</strong>, in the app's private storage.</p>
-<p>There is one exception, and only when you start it yourself: the <strong>Speed Test</strong> tool sends requests to Cloudflare (see below).</p>
+<p>Vectorem has no accounts and does not itself collect any personal data. Everything the app produces (tasks, reminders, events, audio recordings, clipboard history, notes, calculations…) is stored <strong>only on your device</strong>, in the app's private storage.</p>
+<p>Two features contact an outside service, and only when you start them yourself: the <strong>Speed Test</strong> (Cloudflare) and the <strong>optional ads</strong> (Google AdMob) that you can watch to unlock a tool or feature. No ad is shown without your action.</p>
 
 <h2>Data stored locally</h2>
 <p>Depending on the tools you enable, Vectorem stores locally (never transmitted):</p>
@@ -110,29 +121,39 @@
   <li>Tasks, reminders and events you create (title, due date, notes).</li>
   <li>Voice recorder audio files (kept in the app's private storage).</li>
   <li>Clipboard history (only what you copy while the Clipboard screen is open — Android blocks background clipboard access since Android 10).</li>
-  <li>Quick notes, histories (palettes, QR codes, Morse code, random draws, pulse readings, shakes, speed tests) and each tool's settings.</li>
+  <li>Quick notes, histories (palettes, QR codes, Morse code, random draws, shakes, speed tests), each tool's settings, your home layout and the list of features you unlocked.</li>
 </ul>
 <p>None of this leaves your device. Uninstalling Vectorem permanently deletes all of it. Backups and exports you trigger yourself (backup file, palette, whiteboard or QR image) are written wherever you send them; the app does not transmit them anywhere.</p>
 
-<h2>Network connections</h2>
+<h2>Optional ads (Google AdMob)</h2>
+<ul>
+  <li>Vectorem shows <strong>no forced advertising</strong>. A video ad is loaded only when you tap “Watch an ad” to unlock a tool or feature.</li>
+  <li>At that moment, the Google Mobile Ads SDK (Google LLC) collects and shares with Google, for advertising, analytics and fraud prevention: your <strong>IP address</strong>, your <strong>interactions with the ad</strong> (for example the video watched), <strong>diagnostic information</strong> and <strong>device identifiers</strong> (Android advertising ID, app set ID). This data is encrypted in transit (TLS). See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+  <li>Vectorem does not receive or store this data: the app only learns that the ad was watched to the end, and records the unlock on your device.</li>
+  <li>In the European Economic Area (and the United Kingdom), a consent form is shown before the first ad. You can change your choices at any time in Settings → Ads → “Ad privacy choices”. If you decline, no ad is shown and the feature stays locked.</li>
+  <li>You can reset or delete the advertising ID in Android settings (Ads / Privacy section).</li>
+</ul>
+
+<h2>Other network connections</h2>
 <ul>
   <li><strong>Speed Test</strong>: when you start a test, Vectorem downloads and uploads test data to <code>speed.cloudflare.com</code> (Cloudflare) to measure your connection. Like any website, Cloudflare receives your IP address and the technical details of a request. Vectorem adds no personal data. The result is stored only on your device. No test runs without your action.</li>
   <li><strong>Network Scanner</strong>: probes devices on your local (Wi-Fi) network. Results stay on the device.</li>
-  <li>No other connections: no ads, no statistics, no crash reporting.</li>
+  <li>No other connections: no usage statistics, no crash reporting.</li>
 </ul>
 
 <h2>Permissions used</h2>
-<p>Each permission is requested only when you enable the corresponding tool, never at app launch.</p>
+<p>Sensitive permissions (camera, microphone, notifications) are requested only when you enable the corresponding tool, never at app launch.</p>
 <div class="tablewrap">
 <table>
   <thead><tr><th>Permission</th><th>Tool</th><th>Purpose</th></tr></thead>
   <tbody>
-    <tr><td>Camera</td><td>QR Code, Magnifier, Pulse</td><td>Scan a QR code, magnify the live image, or watch light changes under the flash to estimate your pulse. Nothing is photographed or recorded.</td></tr>
-    <tr><td>Microphone</td><td>Voice Recorder, Sound Meter</td><td>Record an audio memo (Voice Recorder) or measure ambient sound level (Sound Meter, nothing is recorded).</td></tr>
+    <tr><td>Camera</td><td>QR Code, Toolbox (magnifier), Morse (flash detection)</td><td>Scan a QR code, magnify the live image, or detect light flashes. Nothing is photographed or recorded.</td></tr>
+    <tr><td>Microphone</td><td>Voice Recorder, Sound Meter, Morse (sound detection)</td><td>Record an audio memo (Voice Recorder), measure ambient sound level (Sound Meter) or detect beeps (Morse). Only the Voice Recorder records.</td></tr>
     <tr><td>Notifications</td><td>Reminders, Tasks, Events, Timer, Pomodoro</td><td>Show the notification for a reminder, a task deadline, an event, a timer or a Pomodoro phase.</td></tr>
     <tr><td>Run at startup</td><td>Reminders, Tasks, Events, Timer, Pomodoro</td><td>Reschedule your alerts after the phone restarts — otherwise they would be lost.</td></tr>
-    <tr><td>Internet</td><td>Speed Test, Network Scanner</td><td>Measure your connection and probe your local network (see “Network connections”).</td></tr>
-    <tr><td>Network state</td><td>Device Info, Network Scanner</td><td>Show whether you are on Wi-Fi or mobile data — read-only.</td></tr>
+    <tr><td>Internet</td><td>Speed Test, Network Scanner, optional ads</td><td>Measure your connection, probe your local network and load an ad you chose to watch (see “Optional ads”).</td></tr>
+    <tr><td>Advertising ID</td><td>Optional ads</td><td>Lets Google AdMob use the device advertising ID when you watch an ad. Resettable in Android settings.</td></tr>
+    <tr><td>Network state</td><td>Device Info, Network Scanner, optional ads</td><td>Show whether you are on Wi-Fi or mobile data — read-only.</td></tr>
     <tr><td>Audio settings</td><td>Equalizer, Spatial Audio</td><td>Attach a processing effect to the audio being played. It never captures sound, unlike the Microphone.</td></tr>
     <tr><td>Biometrics / fingerprint</td><td>App lock (Settings)</td><td>Lock the app with your phone's fingerprint, face or passcode. Vectorem never sees or stores biometric data: Android handles it all.</td></tr>
   </tbody>
@@ -141,16 +162,17 @@
 <p>The Palette tool's photo picker (choosing an image to extract its colors) is not in this table: Android provides it without the app needing any permission.</p>
 
 <h2>Sharing with third parties</h2>
-<p>None. Vectorem shares no data with anyone. The only communication with a third party is the Speed Test described above, which you start yourself.</p>
+<p>Vectorem sells no data. The only communications with third parties are the ones described above and triggered by you: Google (optional ads) and Cloudflare (Speed Test).</p>
 
 <h2>Data deletion</h2>
 <ul>
-  <li>Uninstalling the app deletes all of its data.</li>
+  <li>Uninstalling the app deletes all of its local data.</li>
   <li>From Android settings (System settings → Apps → Vectorem → Storage) you can also clear the data without uninstalling.</li>
+  <li>For data processed by Google when you watch an ad, use your Google account controls and the Android advertising ID settings.</li>
 </ul>
 
 <h2>Children</h2>
-<p>Vectorem does not specifically target children and collects no personal data from any user.</p>
+<p>Vectorem is not directed at children under 13 and does not knowingly collect any data about them.</p>
 
 <h2>Contact</h2>
 <p>For any question about this privacy policy: <a href="mailto:themandawalker.pro@gmail.com">themandawalker.pro@gmail.com</a></p>
