@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vectorem — Politique de confidentialité / Privacy Policy</title>
+<meta name="description" content="Politique de confidentialité de l'application Android Vectorem. Privacy policy of the Vectorem Android app.">
+<style>
+  :root { --bg:#fbfaf7; --ink:#191816; --muted:#6b675f; --line:#dedad0; --accent:#8a5a00; --card:#f2efe6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101010; --ink:#f0ece2; --muted:#a29d90; --line:#2c2a25; --accent:#ffd426; --card:#1b1a17; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; text-wrap: balance; }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .5rem; }
+  p, li { max-width: 68ch; }
+  .meta { color: var(--muted); margin: 0 0 1.25rem; }
+  nav { display:flex; gap:.75rem; margin: 0 0 2rem; }
+  nav a { color: var(--accent); }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 3.5rem 0 2.5rem; }
+  .tablewrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .55rem .7rem; border-bottom: 1px solid var(--line); }
+  th { background: var(--card); font-weight: 600; }
+  td:first-child { white-space: nowrap; font-weight: 600; }
+  code { background: var(--card); padding: .05rem .3rem; border-radius: 3px; }
+</style>
+</head>
+<body>
+<main>
+
+<nav aria-label="Langue / Language"><a href="#fr">Français</a> · <a href="#en">English</a></nav>
+
+<article id="fr" lang="fr">
+<h1>Politique de confidentialité — Vectorem</h1>
+<p class="meta">Dernière mise à jour : 19 septembre 2026</p>
+
+<h2>Résumé</h2>
+<p>Vectorem ne collecte aucune donnée personnelle, n'a pas de compte, n'intègre aucun SDK publicitaire ou analytique, et ne partage rien avec des tiers. Tout ce que l'application produit (tâches, rappels, événements, enregistrements audio, historique du presse-papiers, notes, calculs…) reste stocké <strong>uniquement sur ton appareil</strong>, dans l'espace privé de l'application.</p>
+<p>Une seule exception, et seulement quand tu la lances toi-même : l'outil <strong>Test de débit</strong> envoie des requêtes à Cloudflare (voir plus bas).</p>
+
+<h2>Données stockées localement</h2>
+<p>Selon les outils que tu actives, Vectorem enregistre localement (jamais transmis) :</p>
+<ul>
+  <li>Tâches, rappels et événements que tu crées (titre, échéance, notes).</li>
+  <li>Enregistrements audio du Dictaphone (stockés dans l'espace privé de l'app).</li>
+  <li>Historique du presse-papiers (uniquement ce que tu copies pendant que l'écran Presse-papiers est ouvert — Android bloque la lecture en arrière-plan depuis Android 10).</li>
+  <li>Notes rapides, historiques (palettes, codes QR, code Morse, tirages, mesures de pouls, secousses, tests de débit) et réglages de chaque outil.</li>
+</ul>
+<p>Rien de tout cela ne quitte l'appareil. Désinstaller Vectorem supprime définitivement toutes ces données. Les sauvegardes et exports que tu déclenches toi-même (fichier de sauvegarde, image de palette, de tableau ou de code QR) sont écrits là où tu les envoies ; l'app ne les transmet nulle part.</p>
+
+<h2>Connexions réseau</h2>
+<ul>
+  <li><strong>Test de débit</strong> : quand tu lances un test, Vectorem télécharge et envoie des données de test vers <code>speed.cloudflare.com</code> (Cloudflare) pour mesurer ta connexion. Cloudflare reçoit, comme n'importe quel site web, ton adresse IP et les informations techniques d'une requête. Aucune donnée personnelle n'est ajoutée par Vectorem. Le résultat n'est enregistré que sur ton appareil. Aucun test ne se lance sans action de ta part.</li>
+  <li><strong>Scanner réseau</strong> : sonde les appareils de ton réseau local (Wi-Fi). Les résultats restent sur l'appareil.</li>
+  <li>Aucune autre connexion : pas de publicité, pas de statistiques, pas de rapport d'erreurs.</li>
+</ul>
+
+<h2>Permissions utilisées</h2>
+<p>Chaque permission n'est demandée qu'au moment où tu actives l'outil correspondant, jamais au démarrage de l'app.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Permission</th><th>Outil</th><th>Usage</th></tr></thead>
+  <tbody>
+    <tr><td>Caméra</td><td>Code QR, Loupe, Pulse</td><td>Lire un QR code, grossir l'image en direct, ou observer les variations de lumière sous le flash pour estimer le pouls. Rien n'est photographié ni enregistré.</td></tr>
+    <tr><td>Microphone</td><td>Dictaphone, Sonomètre</td><td>Enregistrer un mémo audio (Dictaphone) ou mesurer le niveau sonore ambiant (Sonomètre, rien n'est enregistré).</td></tr>
+    <tr><td>Notifications</td><td>Rappels, Tâches, Événements, Minuteur, Pomodoro</td><td>Afficher la notification d'un rappel, d'une échéance de tâche, d'un événement, d'un minuteur ou d'une phase Pomodoro.</td></tr>
+    <tr><td>Superposition (afficher par-dessus d'autres apps)</td><td>Rappels, Minuteur, Pomodoro</td><td>Afficher une alerte par-dessus l'app en cours, si tu actives cette option.</td></tr>
+    <tr><td>Alarmes et rappels (alarme exacte)</td><td>Rappels, Tâches, Événements, Minuteur, Pomodoro</td><td>Déclencher une alerte à l'heure précise plutôt qu'à quelques minutes près. Facultative : sans elle, l'alerte peut avoir quelques minutes de retard.</td></tr>
+    <tr><td>Démarrage terminé</td><td>Rappels, Tâches, Événements, Minuteur, Pomodoro</td><td>Reprogrammer tes alertes après un redémarrage du téléphone — sans ça, elles seraient perdues.</td></tr>
+    <tr><td>Service de premier plan</td><td>Rappels, Minuteur, Pomodoro</td><td>Fait tourner la superposition d'alerte de façon fiable pendant qu'elle s'affiche.</td></tr>
+    <tr><td>Internet</td><td>Test de débit, Scanner réseau</td><td>Mesurer ta connexion et sonder ton réseau local (voir « Connexions réseau »).</td></tr>
+    <tr><td>État du réseau</td><td>Infos appareil, Scanner réseau</td><td>Afficher si tu es connecté en Wi-Fi ou en données mobiles — lecture seule.</td></tr>
+    <tr><td>Réglages audio</td><td>Égaliseur, Son spatial</td><td>Attacher un effet de traitement au son en cours de lecture. Ne capte jamais de son, contrairement au Microphone.</td></tr>
+    <tr><td>Biométrie / empreinte</td><td>Verrouillage de l'app (Réglages)</td><td>Verrouiller l'app avec l'empreinte, le visage ou le code de ton téléphone. Vectorem ne voit ni ne stocke aucune donnée biométrique : tout est géré par Android.</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Le sélecteur de photo de l'outil Palette (choisir une image pour en extraire les couleurs) n'apparaît pas dans ce tableau : Android le fournit sans qu'aucune permission ne soit demandée à l'app.</p>
+
+<h2>Partage avec des tiers</h2>
+<p>Aucun. Vectorem ne partage aucune donnée avec qui que ce soit. La seule communication avec un tiers est le Test de débit décrit ci-dessus, que tu déclenches toi-même.</p>
+
+<h2>Suppression des données</h2>
+<ul>
+  <li>Désinstaller l'application supprime toutes ses données.</li>
+  <li>Depuis les réglages Android de l'app (Paramètres système → Applications → Vectorem → Stockage), tu peux aussi vider les données sans désinstaller.</li>
+</ul>
+
+<h2>Enfants</h2>
+<p>Vectorem ne cible pas spécifiquement les enfants et ne collecte aucune donnée personnelle, d'aucun utilisateur.</p>
+
+<h2>Contact</h2>
+<p>Pour toute question sur cette politique de confidentialité : <a href="mailto:themandawalker.pro@gmail.com">themandawalker.pro@gmail.com</a></p>
+</article>
+
+<hr>
+
+<article id="en" lang="en">
+<h1>Privacy Policy — Vectorem</h1>
+<p class="meta">Last updated: September 19, 2026</p>
+
+<h2>Summary</h2>
+<p>Vectorem collects no personal data, has no accounts, includes no advertising or analytics SDK, and shares nothing with third parties. Everything the app produces (tasks, reminders, events, audio recordings, clipboard history, notes, calculations…) is stored <strong>only on your device</strong>, in the app's private storage.</p>
+<p>There is one exception, and only when you start it yourself: the <strong>Speed Test</strong> tool sends requests to Cloudflare (see below).</p>
+
+<h2>Data stored locally</h2>
+<p>Depending on the tools you enable, Vectorem stores locally (never transmitted):</p>
+<ul>
+  <li>Tasks, reminders and events you create (title, due date, notes).</li>
+  <li>Voice recorder audio files (kept in the app's private storage).</li>
+  <li>Clipboard history (only what you copy while the Clipboard screen is open — Android blocks background clipboard access since Android 10).</li>
+  <li>Quick notes, histories (palettes, QR codes, Morse code, random draws, pulse readings, shakes, speed tests) and each tool's settings.</li>
+</ul>
+<p>None of this leaves your device. Uninstalling Vectorem permanently deletes all of it. Backups and exports you trigger yourself (backup file, palette, whiteboard or QR image) are written wherever you send them; the app does not transmit them anywhere.</p>
+
+<h2>Network connections</h2>
+<ul>
+  <li><strong>Speed Test</strong>: when you start a test, Vectorem downloads and uploads test data to <code>speed.cloudflare.com</code> (Cloudflare) to measure your connection. Like any website, Cloudflare receives your IP address and the technical details of a request. Vectorem adds no personal data. The result is stored only on your device. No test runs without your action.</li>
+  <li><strong>Network Scanner</strong>: probes devices on your local (Wi-Fi) network. Results stay on the device.</li>
+  <li>No other connections: no ads, no statistics, no crash reporting.</li>
+</ul>
+
+<h2>Permissions used</h2>
+<p>Each permission is requested only when you enable the corresponding tool, never at app launch.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Permission</th><th>Tool</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td>Camera</td><td>QR Code, Magnifier, Pulse</td><td>Scan a QR code, magnify the live image, or watch light changes under the flash to estimate your pulse. Nothing is photographed or recorded.</td></tr>
+    <tr><td>Microphone</td><td>Voice Recorder, Sound Meter</td><td>Record an audio memo (Voice Recorder) or measure ambient sound level (Sound Meter, nothing is recorded).</td></tr>
+    <tr><td>Notifications</td><td>Reminders, Tasks, Events, Timer, Pomodoro</td><td>Show the notification for a reminder, a task deadline, an event, a timer or a Pomodoro phase.</td></tr>
+    <tr><td>Display over other apps</td><td>Reminders, Timer, Pomodoro</td><td>Show an alert over the app you are using, if you turn this option on.</td></tr>
+    <tr><td>Alarms &amp; reminders (exact alarm)</td><td>Reminders, Tasks, Events, Timer, Pomodoro</td><td>Fire an alert at the exact time instead of within a few minutes. Optional: without it, alerts may be a few minutes late.</td></tr>
+    <tr><td>Run at startup</td><td>Reminders, Tasks, Events, Timer, Pomodoro</td><td>Reschedule your alerts after the phone restarts — otherwise they would be lost.</td></tr>
+    <tr><td>Foreground service</td><td>Reminders, Timer, Pomodoro</td><td>Keeps the alert overlay running reliably while it is displayed.</td></tr>
+    <tr><td>Internet</td><td>Speed Test, Network Scanner</td><td>Measure your connection and probe your local network (see “Network connections”).</td></tr>
+    <tr><td>Network state</td><td>Device Info, Network Scanner</td><td>Show whether you are on Wi-Fi or mobile data — read-only.</td></tr>
+    <tr><td>Audio settings</td><td>Equalizer, Spatial Audio</td><td>Attach a processing effect to the audio being played. It never captures sound, unlike the Microphone.</td></tr>
+    <tr><td>Biometrics / fingerprint</td><td>App lock (Settings)</td><td>Lock the app with your phone's fingerprint, face or passcode. Vectorem never sees or stores biometric data: Android handles it all.</td></tr>
+  </tbody>
+</table>
+</div>
+<p>The Palette tool's photo picker (choosing an image to extract its colors) is not in this table: Android provides it without the app needing any permission.</p>
+
+<h2>Sharing with third parties</h2>
+<p>None. Vectorem shares no data with anyone. The only communication with a third party is the Speed Test described above, which you start yourself.</p>
+
+<h2>Data deletion</h2>
+<ul>
+  <li>Uninstalling the app deletes all of its data.</li>
+  <li>From Android settings (System settings → Apps → Vectorem → Storage) you can also clear the data without uninstalling.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Vectorem does not specifically target children and collects no personal data from any user.</p>
+
+<h2>Contact</h2>
+<p>For any question about this privacy policy: <a href="mailto:themandawalker.pro@gmail.com">themandawalker.pro@gmail.com</a></p>
+</article>
+
+</main>
+</body>
+</html>
